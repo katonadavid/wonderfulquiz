@@ -25,6 +25,7 @@ document.addEventListener('keyup', startWithSpace);
 
 startBtn.addEventListener('click', startGame);
 
+ 
 async function startGame(){
 
     document.removeEventListener('keyup', startWithSpace);
