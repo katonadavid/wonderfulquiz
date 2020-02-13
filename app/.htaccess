@@ -1,0 +1,11 @@
+RewriteEngine on
+
+# Írjuk be a %TELEPITESI_MAPPA% helyére a mappa nevét ahová a programot másoltuk
+# FONTOS ! A '/app' útvonalat NE töröljük ki!
+# Például: /quiz/app
+
+
+RewriteBase /davidkatona/quiz/app
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)$ main.php?url=$1 [QSA,L]

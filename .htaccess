@@ -1,0 +1,9 @@
+RewriteEngine on
+
+# Írjuk be a %TELEPITESI_MAPPA% helyére a mappa nevét ahová a programot másoltuk
+# Például: /quiz
+
+RewriteBase /davidkatona/quiz
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
